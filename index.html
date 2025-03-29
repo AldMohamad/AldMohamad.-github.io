@@ -2,23 +2,78 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>محمد الضاهر - الصفحة الرئيسية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="محمد الضاهر, صحافة, سياسي, اجتماعي, لجوء, سوريا, حقوق الإنسان, مقالات, ألمانيا">
+    <meta name="description" content="الموقع الشخصي للصحفي محمد الضاهر، مقالات وتحقيقات ثنائية اللغة حول الشأن السوري واللاجئين وحقوق الإنسان.">
+    <title>محمد الضاهر | Mohamad Al-Daher</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html">من أنا</a></li>
-        <li><a href="articles.html">مقالاتي</a></li>
-        <li><a href="projects.html">مشاريعي</a></li>
-        <li><a href="contact.html">تواصل معي</a></li>
-        <li><a href="#">Deutsch</a></li>
-    </ul>
-</nav>
-<main>
-    <h1>مرحباً بكم في موقعي الشخصي</h1>
-    <p>هنا أنشر كتاباتي ومقالاتي وتجربتي الشخصية.</p>
-</main>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية | Startseite</a></li>
+                <li><a href="#about">من أنا | Über mich</a></li>
+                <li><a href="#articles">مقالاتي | Artikel</a></li>
+                <li><a href="#projects">مشاريعي | Projekte</a></li>
+                <li><a href="#contact">تواصل معي | Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>من أنا | Über mich</h2>
+            <p>محمد الضاهر، صحفي سابق من سوريا، أعيش حالياً في ألمانيا. أعمل على توثيق التجارب والقصص المتعلقة باللجوء وحقوق الإنسان باللغتين العربية والألمانية.</p>
+            <p>Mohamad Al-Daher, ehemaliger Journalist aus Syrien, lebt derzeit in Deutschland. Ich dokumentiere Erfahrungen und Geschichten über Flucht und Menschenrechte auf Arabisch und Deutsch.</p>
+        </section>
+
+        <section id="articles">
+            <h2>مقالاتي | Meine Artikel</h2>
+
+            <article>
+                <h3>بين عبودية الأمس و"الحرية المقنّعة" اليوم</h3>
+                <p>مقال سياسي اجتماعي يناقش أوجه الشبه بين أشكال العمل المعاصر والعبودية التاريخية...</p>
+                <span class="tag">#سياسي</span>
+                <span class="tag">#اجتماعي</span>
+            </article>
+
+            <article>
+                <h3>العنف المتصاعد بين اللاجئين في ألمانيا</h3>
+                <p>تحقيق اجتماعي من إعداد محمد الضاهر، يستند إلى مقابلات مع لاجئين...</p>
+                <span class="tag">#لاجئين</span>
+                <span class="tag">#ألمانيا</span>
+            </article>
+
+            <article>
+                <h3>أنس... من غوطته إلى قلب الصدمة</h3>
+                <p>قصة شاب سوري نجا من الموت أكثر من مرة، ووجد لنفسه مكاناً جديداً في الحياة بعد معاناة طويلة...</p>
+                <span class="tag">#قصة_حياة</span>
+                <span class="tag">#اللجوء</span>
+            </article>
+        </section>
+
+        <section id="projects">
+            <h2>مشاريعي | Meine Projekte</h2>
+            <p>أعمل على أرشفة مقالاتي الصحفية القديمة بالإضافة إلى مشاريع توثيقية حول اللاجئين السوريين في أوروبا.</p>
+        </section>
+
+        <section id="contact">
+            <h2>تواصل معي | Kontakt</h2>
+            <form action="mailto:Aldahermohamad4@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">رسالتك:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 محمد الضاهر | جميع الحقوق محفوظة</p>
+    </footer>
 </body>
 </html>
