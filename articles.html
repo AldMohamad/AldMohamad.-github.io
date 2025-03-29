@@ -26,6 +26,19 @@
       background-color: #0056b3;
     }
 
+    .search-bar {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
     .article-card {
       display: block;
     }
@@ -38,6 +51,7 @@
         <li><a href="index.html">الرئيسية</a></li>
         <li><a href="about.html">من أنا</a></li>
         <li><a href="articles.html">مقالاتي</a></li>
+        <li><a href="tawasol.html">تواصل معي</a></li>
         <li><a href="index-de.html">Deutsch</a></li>
       </ul>
     </nav>
@@ -46,11 +60,16 @@
   <main>
     <h1>مقالاتي</h1>
 
+    <div class="search-bar">
+      <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="ابحث عن مقالة...">
+    </div>
+
     <div class="filter-buttons">
       <button onclick="filterArticles('all')">الكل</button>
       <button onclick="filterArticles('مجتمع')">مجتمع</button>
       <button onclick="filterArticles('سياسة')">سياسة</button>
       <button onclick="filterArticles('اندماج')">اندماج</button>
+      <button onclick="filterArticles('فكر نقدي')">فكر نقدي</button>
     </div>
 
     <section class="articles">
@@ -80,6 +99,20 @@
       cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (category === 'all' || cardCategory === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function searchArticles() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const cards = document.querySelectorAll('.article-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(filter)) {
           card.style.display = 'block';
         } else {
           card.style.display = 'none';
