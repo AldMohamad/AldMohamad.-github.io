@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>موقع محمد الضاهر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="محمد الضاهر, صحافة, سياسي, اجتماعي, لجوء, سوريا, حقوق الإنسان, مقالات, ألمانيا">
+  <meta name="description" content="الموقع الشخصي للصحفي محمد الضاهر">
+  <style>
+    body { font-family: sans-serif; direction: rtl; margin: 0; background: #f9f9f9; }
+    nav { background: #111; color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+    nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+    nav li { margin-left: 15px; }
+    nav a { color: white; text-decoration: none; }
+    .lang-switch { background: white; color: #111; padding: 5px 10px; border-radius: 5px; cursor: pointer; border: none; }
+    section { display: none; padding: 20px; }
+    .active { display: block; }
+    article { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    button { margin: 5px; padding: 6px 12px; cursor: pointer; border: none; border-radius: 5px; background: #111; color: white; }
+    .lang-text { display: none; margin-top: 10px; }
+    .tags { margin-top: 10px; }
+    .tag { display: inline-block; background: #eee; padding: 4px 8px; margin: 2px; border-radius: 4px; font-size: 0.8em; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul class="ar">
+    <li><a onclick="showSection('home')">الرئيسية</a></li>
+    <li><a onclick="showSection('about')">من أنا</a></li>
+    <li><a onclick="showSection('articles')">مقالاتي</a></li>
+    <li><a onclick="showSection('projects')">مشاريعي</a></li>
+    <li><a onclick="showSection('contact')">تواصل معي</a></li>
+  </ul>
+  <ul class="de" style="display:none;">
+    <li><a onclick="showSection('home')">Startseite</a></li>
+    <li><a onclick="showSection('about')">Über mich</a></li>
+    <li><a onclick="showSection('articles')">Artikel</a></li>
+    <li><a onclick="showSection('projects')">Projekte</a></li>
+    <li><a onclick="showSection('contact')">Kontakt</a></li>
+  </ul>
+  <button class="lang-switch" onclick="toggleLanguage()">Deutsch</button>
+</nav>
+
+<section id="home" class="active">
+  <h2 class="ar">مرحباً بكم في موقعي الشخصي</h2>
+  <h2 class="de">Willkommen auf meiner persönlichen Website</h2>
+  <p class="ar">هنا أنشر مقالاتي وتجربتي في الصحافة واللجوء والهوية.</p>
+  <p class="de">Hier veröffentliche ich meine Artikel und Erfahrungen zu Journalismus, Flucht und Identität.</p>
+</section>
+
+<section id="about">
+  <h2 class="ar">من أنا</h2>
+  <h2 class="de">Über mich</h2>
+  <p class="ar">محمد الضاهر، صحفي سابق من سوريا، أعيش حالياً في ألمانيا.</p>
+  <p class="de">Mohamad Al-Daher, ehemaliger Journalist aus Syrien, lebt derzeit in Deutschland.</p>
+</section>
+
+<section id="articles">
+  <h2 class="ar">مقالاتي</h2>
+  <h2 class="de">Meine Artikel</h2>
+  <article>
+    <h3 class="ar">بين عبودية الأمس و"الحرية المقنّعة" اليوم</h3>
+    <h3 class="de">Zwischen der Sklaverei von gestern und der „getarnten Freiheit“ von heute</h3>
+    <button onclick="toggleLang('a1-ar')">اقرأ بالعربية</button>
+    <button onclick="toggleLang('a1-de')">اقرأ بالألمانية</button>
+    <div id="a1-ar" class="lang-text">
+      <p>في هذا المقال نستعرض كيف أن الكثير من أنظمة العمل الحديثة تقوم على استغلال حاجات الإنسان للعيش...</p>
+    </div>
+    <div id="a1-de" class="lang-text">
+      <p>In diesem Artikel analysieren wir, wie moderne Arbeitsformen oft die Notwendigkeit des Menschen zu leben ausnutzen...</p>
+    </div>
+    <div class="tags">
+      <span class="tag">#سياسي</span>
+      <span class="tag">#اجتماعي</span>
+    </div>
+  </article>
+
+  <article>
+    <h3 class="ar">العنف المتصاعد بين اللاجئين في ألمانيا</h3>
+    <h3 class="de">Zunehmende Gewalt unter Geflüchteten in Deutschland</h3>
+    <button onclick="toggleLang('a2-ar')">اقرأ بالعربية</button>
+    <button onclick="toggleLang('a2-de')">اقرأ بالألمانية</button>
+    <div id="a2-ar" class="lang-text">
+      <p>تشهد بعض مناطق ألمانيا توتراً متزايداً بين مجموعات من اللاجئين لأسباب تتعلق بالهوية والثقافة...</p>
+    </div>
+    <div id="a2-de" class="lang-text">
+      <p>Einige Regionen in Deutschland erleben zunehmende Spannungen zwischen Flüchtlingsgruppen...</p>
+    </div>
+    <div class="tags">
+      <span class="tag">#لاجئين</span>
+      <span class="tag">#ألمانيا</span>
+    </div>
+  </article>
+
+  <article>
+    <h3 class="ar">أنس... من غوطته إلى قلب الصدمة</h3>
+    <h3 class="de">Anas... von Ghouta ins Herz des Traumas</h3>
+    <button onclick="toggleLang('a3-ar')">اقرأ بالعربية</button>
+    <button onclick="toggleLang('a3-de')">اقرأ بالألمانية</button>
+    <div id="a3-ar" class="lang-text">
+      <p>أنس، الشاب الذي عاش أهوال الحرب من إصابة في الغوطة إلى التعذيب في لبنان والاختطاف في ليبيا، يعيد بناء حياته اليوم في ألمانيا عبر مهنته في الإلكترونيات.</p>
+    </div>
+    <div id="a3-de" class="lang-text">
+      <p>Anas, ein junger Syrer, der den Schrecken des Krieges überlebt hat – von einer Verletzung in Ghouta bis zur Entführung in Libyen. Heute beginnt er in Deutschland ein neues Leben als Elektroniker.</p>
+    </div>
+    <div class="tags">
+      <span class="tag">#قصة_حياة</span>
+      <span class="tag">#اللجوء</span>
+      <span class="tag">#سوريا</span>
+    </div>
+  </article>
+
+</section>
+
+<section id="projects">
+  <h2 class="ar">مشاريعي</h2>
+  <h2 class="de">Meine Projekte</h2>
+  <p class="ar">أعمل على أرشفة مقالاتي الصحفية ومشاريع توثيقية.</p>
+  <p class="de">Ich arbeite an der Archivierung meiner journalistischen Artikel und Dokumentationsprojekte.</p>
+</section>
+
+<section id="contact">
+  <h2 class="ar">تواصل معي</h2>
+  <h2 class="de">Kontakt</h2>
+  <form action="mailto:Aldahermohamad4@gmail.com" method="POST" enctype="text/plain">
+    <label class="ar">الاسم:</label>
+    <label class="de">Name:</label>
+    <input type="text" name="name" required>
+    <label class="ar">البريد الإلكتروني:</label>
+    <label class="de">E-Mail:</label>
+    <input type="email" name="email" required>
+    <label class="ar">رسالتك:</label>
+    <label class="de">Nachricht:</label>
+    <textarea name="message" required></textarea>
+    <button type="submit">إرسال | Senden</button>
+  </form>
+</section>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function toggleLang(id) {
+  const box = document.getElementById(id);
+  const visible = box.style.display === 'block';
+  document.querySelectorAll('.lang-text').forEach(div => div.style.display = 'none');
+  box.style.display = visible ? 'none' : 'block';
+}
+
+let currentLang = 'ar';
+function toggleLanguage() {
+  currentLang = currentLang === 'ar' ? 'de' : 'ar';
+  document.querySelectorAll('.ar').forEach(el => el.style.display = currentLang === 'ar' ? 'block' : 'none');
+  document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
+}
+toggleLanguage();
+</script>
+
+</body>
+</html>
