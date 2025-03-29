@@ -37,3 +37,11 @@ nav ul li a {
 main {
   padding-top: 80px;
 }
+
+nav ul {
+  padding: 0 20px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
