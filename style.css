@@ -55,3 +55,29 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.article-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: right;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
