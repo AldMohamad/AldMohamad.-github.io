@@ -2,90 +2,115 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <title>محمد الضاهر | Mohamad Al-Daher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="محمد الضاهر, صحافة, سياسي, اجتماعي, لجوء, سوريا, حقوق الإنسان, مقالات, ألمانيا">
   <meta name="description" content="الموقع الشخصي للصحفي محمد الضاهر، مقالات وتحقيقات ثنائية اللغة حول الشأن السوري واللاجئين وحقوق الإنسان.">
-  <title>محمد الضاهر | Mohamad Al-Daher</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    .section { display: none; padding: 20px; }
-    .active { display: block; }
-    nav ul { display: flex; justify-content: flex-end; background: #111; padding: 10px; list-style: none; }
+    body { font-family: sans-serif; margin: 0; background: #fdfdfd; direction: rtl; }
+    nav { background: #111; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+    nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
     nav li { margin-left: 15px; }
     nav a { color: white; text-decoration: none; cursor: pointer; }
-    body { font-family: sans-serif; direction: rtl; background: #f9f9f9; margin: 0; }
+    .lang-switch { background: white; color: #111; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+    .section { display: none; padding: 20px; }
+    .active { display: block; }
     article { background: #fff; margin-bottom: 15px; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
     .tag { background: #eee; padding: 3px 6px; margin: 2px; border-radius: 4px; font-size: 0.8em; display: inline-block; }
     form { display: flex; flex-direction: column; }
-    input, textarea { margin-bottom: 10px; padding: 8px; }
-    button { padding: 10px; background-color: #111; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    input, textarea { margin-bottom: 10px; padding: 8px; font-size: 1em; }
+    button { padding: 10px; background-color: #111; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .lang-ar, .lang-de { display: none; }
+    .lang-visible { display: block !important; }
   </style>
 </head>
 <body>
 
 <nav>
   <ul>
-    <li><a onclick="showSection('home')">الرئيسية | Startseite</a></li>
-    <li><a onclick="showSection('about')">من أنا | Über mich</a></li>
-    <li><a onclick="showSection('articles')">مقالاتي | Artikel</a></li>
-    <li><a onclick="showSection('projects')">مشاريعي | Projekte</a></li>
-    <li><a onclick="showSection('contact')">تواصل معي | Kontakt</a></li>
+    <li><a onclick="showSection('home')">الرئيسية</a></li>
+    <li><a onclick="showSection('about')">من أنا</a></li>
+    <li><a onclick="showSection('articles')">مقالاتي</a></li>
+    <li><a onclick="showSection('projects')">مشاريعي</a></li>
+    <li><a onclick="showSection('contact')">تواصل معي</a></li>
   </ul>
+  <span class="lang-switch" onclick="toggleLanguage()">Deutsch | العربية</span>
 </nav>
 
 <div id="home" class="section active">
-  <h2>مرحباً بكم في موقعي الشخصي</h2>
-  <p>هنا أنشر مقالاتي وتجربتي في الصحافة واللجوء والهوية.</p>
+  <h2 class="lang-ar">مرحباً بكم في موقعي الشخصي</h2>
+  <h2 class="lang-de">Willkommen auf meiner persönlichen Website</h2>
+  <p class="lang-ar">هنا أنشر مقالاتي وتجربتي في الصحافة واللجوء والهوية.</p>
+  <p class="lang-de">Hier veröffentliche ich meine Artikel und Erfahrungen zu Journalismus, Flucht und Identität.</p>
 </div>
 
 <div id="about" class="section">
-  <h2>من أنا | Über mich</h2>
-  <p>محمد الضاهر، صحفي سابق من سوريا، أعيش حالياً في ألمانيا. أعمل على توثيق التجارب والقصص المتعلقة باللجوء وحقوق الإنسان باللغتين العربية والألمانية.</p>
-  <p>Mohamad Al-Daher, ehemaliger Journalist aus Syrien, lebt derzeit in Deutschland. Ich dokumentiere Erfahrungen und Geschichten über Flucht und Menschenrechte auf Arabisch und Deutsch.</p>
+  <h2 class="lang-ar">من أنا</h2>
+  <h2 class="lang-de">Über mich</h2>
+  <p class="lang-ar">محمد الضاهر، صحفي سابق من سوريا، أعيش حالياً في ألمانيا.</p>
+  <p class="lang-de">Mohamad Al-Daher, ehemaliger Journalist aus Syrien, lebt derzeit in Deutschland.</p>
 </div>
 
 <div id="articles" class="section">
-  <h2>مقالاتي | Meine Artikel</h2>
+  <h2 class="lang-ar">مقالاتي</h2>
+  <h2 class="lang-de">Meine Artikel</h2>
+
   <article>
     <h3>بين عبودية الأمس و"الحرية المقنّعة" اليوم</h3>
-    <p>مقال سياسي اجتماعي يناقش أوجه الشبه بين أشكال العمل المعاصر والعبودية التاريخية...</p>
-    <span class="tag">#سياسي</span> <span class="tag">#اجتماعي</span>
+    <p class="lang-ar">في هذا المقال نستعرض كيف أن الكثير من أنظمة العمل الحديثة تقوم على استغلال حاجات الإنسان للعيش، مما يجعلها شبيهة بأنظمة العبودية السابقة.</p>
+    <p class="lang-de">In diesem Artikel analysieren wir, wie moderne Arbeitsformen oft die Notwendigkeit des Menschen zu leben ausnutzen, was sie mit früheren Sklavereisystemen vergleichbar macht.</p>
   </article>
+
   <article>
     <h3>العنف المتصاعد بين اللاجئين في ألمانيا</h3>
-    <p>تحقيق اجتماعي من إعداد محمد الضاهر، يستند إلى مقابلات مع لاجئين...</p>
-    <span class="tag">#لاجئين</span> <span class="tag">#ألمانيا</span>
+    <p class="lang-ar">تشهد بعض مناطق ألمانيا توتراً متزايداً بين مجموعات من اللاجئين لأسباب تتعلق بالهوية والثقافة.</p>
+    <p class="lang-de">Einige Regionen in Deutschland erleben zunehmende Spannungen zwischen Flüchtlingsgruppen, bedingt durch Identitätsfragen und kulturelle Unterschiede.</p>
   </article>
+
   <article>
     <h3>أنس... من غوطته إلى قلب الصدمة</h3>
-    <p>قصة شاب سوري نجا من الموت أكثر من مرة، ووجد لنفسه مكاناً جديداً في الحياة بعد معاناة طويلة...</p>
-    <span class="tag">#قصة_حياة</span> <span class="tag">#اللجوء</span>
+    <p class="lang-ar">أنس، الشاب الذي عاش أهوال الحرب، يعيد بناء حياته اليوم في ألمانيا عبر مهنته في الإلكترونيات.</p>
+    <p class="lang-de">Anas, ein junger Syrer, beginnt heute in Deutschland ein neues Leben als Elektroniker.</p>
   </article>
 </div>
 
 <div id="projects" class="section">
-  <h2>مشاريعي | Meine Projekte</h2>
-  <p>أعمل على أرشفة مقالاتي الصحفية القديمة بالإضافة إلى مشاريع توثيقية حول اللاجئين السوريين في أوروبا.</p>
+  <h2 class="lang-ar">مشاريعي</h2>
+  <h2 class="lang-de">Meine Projekte</h2>
+  <p class="lang-ar">أعمل على أرشفة مقالاتي الصحفية ومشاريع توثيقية.</p>
+  <p class="lang-de">Ich arbeite an der Archivierung meiner journalistischen Artikel und Dokumentationsprojekte.</p>
 </div>
 
 <div id="contact" class="section">
-  <h2>تواصل معي | Kontakt</h2>
+  <h2 class="lang-ar">تواصل معي</h2>
+  <h2 class="lang-de">Kontakt</h2>
   <form action="mailto:Aldahermohamad4@gmail.com" method="POST" enctype="text/plain">
-    <label>الاسم:</label>
+    <label class="lang-ar">الاسم:</label>
+    <label class="lang-de">Name:</label>
     <input type="text" name="name" required>
-    <label>البريد الإلكتروني:</label>
+    <label class="lang-ar">البريد الإلكتروني:</label>
+    <label class="lang-de">E-Mail:</label>
     <input type="email" name="email" required>
-    <label>رسالتك:</label>
+    <label class="lang-ar">رسالتك:</label>
+    <label class="lang-de">Nachricht:</label>
     <textarea name="message" required></textarea>
-    <button type="submit">إرسال</button>
+    <button type="submit">إرسال | Senden</button>
   </form>
 </div>
 
 <script>
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+let currentLang = 'ar';
+function toggleLanguage() {
+  currentLang = currentLang === 'ar' ? 'de' : 'ar';
+  document.querySelectorAll('.lang-ar').forEach(el => el.style.display = currentLang === 'ar' ? 'block' : 'none');
+  document.querySelectorAll('.lang-de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
+}
+toggleLanguage(); // Initialize to Arabic first
 </script>
 
 </body>
