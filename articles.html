@@ -41,6 +41,21 @@
 
     .article-card {
       display: block;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #eee;
+      color: #333;
+      padding: 4px 10px;
+      margin: 3px 2px;
+      border-radius: 6px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -51,8 +66,10 @@
         <li><a href="index.html">الرئيسية</a></li>
         <li><a href="about.html">من أنا</a></li>
         <li><a href="articles.html">مقالاتي</a></li>
+        <li><a href="projects.html">مشاريعي</a></li>
         <li><a href="tawasol.html">تواصل معي</a></li>
         <li><a href="index-de.html">Deutsch</a></li>
+        <li><button onclick="toggleMode()" style="background:none;border:none;color:inherit;cursor:pointer;">🌗</button></li>
       </ul>
     </nav>
   </header>
@@ -78,6 +95,11 @@
         <p>من يشعل فتيل التوتر بين اللاجئين والمجتمع الألماني؟</p>
         <a href="article1.html" class="read-more">اقرأ بالعربية</a> |
         <a href="article1-de.html" class="read-more">Lies auf Deutsch</a>
+        <div class="tags">
+          <span class="tag">#مجتمع</span>
+          <span class="tag">#لاجئون</span>
+          <span class="tag">#عنف</span>
+        </div>
       </div>
 
       <div class="article-card" data-category="فكر نقدي">
@@ -85,6 +107,11 @@
         <p>هل نحن أحرار حين نعمل، أم نعيش عبودية ناعمة بثوب ديمقراطي؟</p>
         <a href="article2.html" class="read-more">اقرأ بالعربية</a> |
         <a href="article2-de.html" class="read-more">Lies auf Deutsch</a>
+        <div class="tags">
+          <span class="tag">#عمل</span>
+          <span class="tag">#حرية</span>
+          <span class="tag">#كرامة</span>
+        </div>
       </div>
     </section>
   </main>
@@ -118,6 +145,20 @@
           card.style.display = 'none';
         }
       });
+    }
+
+    // Dark mode toggle
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedMode = localStorage.getItem("mode");
+      if (savedMode === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    });
+
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      localStorage.setItem("mode", isDark ? "dark" : "light");
     }
   </script>
 </body>
