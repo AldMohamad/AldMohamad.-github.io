@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مقالاتي - محمد الضاهر</title>
+  <style>
+    body { font-family: sans-serif; direction: rtl; background: #f9f9f9; padding: 20px; }
+    h1 { text-align: center; }
+    article { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    button { margin: 5px; padding: 6px 12px; cursor: pointer; border: none; border-radius: 5px; background: #111; color: white; }
+    .lang-text { display: none; margin-top: 10px; }
+    .tags { margin-top: 10px; }
+    .tag { display: inline-block; background: #eee; padding: 4px 8px; margin: 2px; border-radius: 4px; font-size: 0.8em; }
+  </style>
+</head>
+<body>
+
+<h1>مقالاتي | Meine Artikel</h1>
+
+<article>
+  <h3>بين عبودية الأمس و"الحرية المقنّعة" اليوم</h3>
+  <button onclick="toggleLang('a1-ar')">اقرأ بالعربية</button>
+  <button onclick="toggleLang('a1-de')">اقرأ بالألمانية</button>
+  <div id="a1-ar" class="lang-text">
+    <p>في هذا المقال نستعرض كيف أن الكثير من أنظمة العمل الحديثة تقوم على استغلال حاجات الإنسان للعيش، مما يجعلها شبيهة بأنظمة العبودية السابقة ولكن بصيغ جديدة مموهة بالحرية.</p>
+  </div>
+  <div id="a1-de" class="lang-text">
+    <p>In diesem Artikel analysieren wir, wie moderne Arbeitsformen oft die Notwendigkeit des Menschen zu leben ausnutzen, was sie mit früheren Sklavereisystemen vergleichbar macht – jedoch in einem neuen, freiheitsgetarnten Gewand.</p>
+  </div>
+  <div class="tags">
+    <span class="tag">#سياسي</span>
+    <span class="tag">#اجتماعي</span>
+    <span class="tag">#العمل</span>
+  </div>
+</article>
+
+<article>
+  <h3>العنف المتصاعد بين اللاجئين في ألمانيا</h3>
+  <button onclick="toggleLang('a2-ar')">اقرأ بالعربية</button>
+  <button onclick="toggleLang('a2-de')">اقرأ بالألمانية</button>
+  <div id="a2-ar" class="lang-text">
+    <p>تشهد بعض مناطق ألمانيا توتراً متزايداً بين مجموعات من اللاجئين لأسباب تتعلق بالهوية والثقافة والضغوط النفسية. هذا المقال يعرض شهادات من لاجئين وعاملين اجتماعيين.</p>
+  </div>
+  <div id="a2-de" class="lang-text">
+    <p>Einige Regionen in Deutschland erleben zunehmende Spannungen zwischen Flüchtlingsgruppen, bedingt durch Identitätsfragen, kulturelle Unterschiede und psychischen Druck. Der Artikel enthält Aussagen von Geflüchteten und Sozialarbeitern.</p>
+  </div>
+  <div class="tags">
+    <span class="tag">#لاجئين</span>
+    <span class="tag">#ألمانيا</span>
+    <span class="tag">#اجتماعي</span>
+  </div>
+</article>
+
+<article>
+  <h3>أنس... من غوطته إلى قلب الصدمة</h3>
+  <button onclick="toggleLang('a3-ar')">اقرأ بالعربية</button>
+  <button onclick="toggleLang('a3-de')">اقرأ بالألمانية</button>
+  <div id="a3-ar" class="lang-text">
+    <p>أنس، الشاب الذي عاش أهوال الحرب من إصابة في الغوطة إلى التعذيب في لبنان والاختطاف في ليبيا، يعيد بناء حياته اليوم في ألمانيا عبر مهنته في الإلكترونيات.</p>
+  </div>
+  <div id="a3-de" class="lang-text">
+    <p>Anas, ein junger Syrer, der den Schrecken des Krieges überlebt hat – von einer Verletzung in Ghouta bis zur Entführung in Libyen. Heute beginnt er in Deutschland ein neues Leben als Elektroniker.</p>
+  </div>
+  <div class="tags">
+    <span class="tag">#قصة_حياة</span>
+    <span class="tag">#اللجوء</span>
+    <span class="tag">#سوريا</span>
+  </div>
+</article>
+
+<script>
+function toggleLang(id) {
+  const box = document.getElementById(id);
+  const visible = box.style.display === 'block';
+  document.querySelectorAll('.lang-text').forEach(div => div.style.display = 'none');
+  box.style.display = visible ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
