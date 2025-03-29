@@ -6,6 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مقالاتي | محمد الضاهر</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    .article-card {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,8 +45,16 @@
 
   <main>
     <h1>مقالاتي</h1>
+
+    <div class="filter-buttons">
+      <button onclick="filterArticles('all')">الكل</button>
+      <button onclick="filterArticles('مجتمع')">مجتمع</button>
+      <button onclick="filterArticles('سياسة')">سياسة</button>
+      <button onclick="filterArticles('اندماج')">اندماج</button>
+    </div>
+
     <section class="articles">
-      <div class="article-card">
+      <div class="article-card" data-category="مجتمع">
         <h2>العنف الصامت</h2>
         <p>من يشعل فتيل التوتر بين اللاجئين والمجتمع الألماني؟</p>
         <a href="article1.html" class="read-more">اقرأ بالعربية</a> |
@@ -34,5 +66,19 @@
   <footer>
     <p>© 2025 محمد الضاهر</p>
   </footer>
+
+  <script>
+    function filterArticles(category) {
+      const cards = document.querySelectorAll('.article-card');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
