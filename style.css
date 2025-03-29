@@ -79,3 +79,13 @@ nav ul li a {
   font-weight: bold;
   font-size: 16px;
 }
+
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  font-size: 14px;
+}
