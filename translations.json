@@ -1,0 +1,16 @@
+{
+    "ar": {
+        "title": "محمد الضاهر",
+        "about": "عنّي",
+        "articles": "المقالات",
+        "projects": "المشاريع",
+        "contact": "اتصل بي"
+    },
+    "de": {
+        "title": "Mohamad Al-Daher",
+        "about": "Über mich",
+        "articles": "Artikel",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    }
+}
