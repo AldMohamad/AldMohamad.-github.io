@@ -51,9 +51,7 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  margin-top: 40px;
 }
 
 .articles {
@@ -80,4 +78,11 @@ footer {
 
 .read-more:hover {
   text-decoration: underline;
+}
+
+.article-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: right;
+  padding-bottom: 40px;
 }
