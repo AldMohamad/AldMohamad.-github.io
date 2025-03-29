@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <button onclick="changeLanguage('ar')" id="lang-ar">عربي</button>
+        <button onclick="changeLanguage('de')" id="lang-de">Deutsch</button>
+    </header>
+
+    <h1 id="title"></h1>
+    <nav>
+        <ul>
+            <li><a href="#" id="about"></a></li>
+            <li><a href="#" id="articles"></a></li>
+            <li><a href="#" id="projects"></a></li>
+            <li><a href="#" id="contact"></a></li>
+        </ul>
+    </nav>
+
+    <!-- شريط العنوان في الأعلى -->
+    <nav id="top-nav">
+        <a href="#" id="main-title"></a>
+    </nav>
+
+    <script>
+        let translations = {};
+
+        // تحميل الترجمات من ملف JSON
+        fetch('translations.json')
+            .then(response => response.json())
+            .then(data => {
+                translations = data;
+                // ضبط اللغة الافتراضية
+                changeLanguage('ar');
+            });
+
+        // دالة لتغيير اللغة
+        function changeLanguage(lang) {
+            // التحقق من وجود الترجمات الخاصة باللغة المحددة
+            if (translations[lang]) {
+                // تحديث النصوص في العناصر
+                document.getElementById('title').innerText = translations[lang].title;
+                document.getElementById('about').innerText = translations[lang].about;
+                document.getElementById('articles').innerText = translations[lang].articles;
+                document.getElementById('projects').innerText = translations[lang].projects;
+                document.getElementById('contact').innerText = translations[lang].contact;
+                document.getElementById('main-title').innerText = translations[lang].title;  // تحديث النص في الشريط العلوي
+                // تحديث نص الأزرار (إن كنت ترغب في تغييره)
+                document.getElementById('lang-ar').innerText = lang === 'ar' ? 'عربي' : 'Arabic';
+                document.getElementById('lang-de').innerText = lang === 'de' ? 'Deutsch' : 'German';
+            }
+        }
+    </script>
+</body>
+</html>
