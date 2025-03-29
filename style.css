@@ -33,3 +33,7 @@ header, footer {
 nav ul li a {
   color: var(--text-color);
 }
+
+main {
+  padding-top: 80px;
+}
